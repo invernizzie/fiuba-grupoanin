@@ -1,0 +1,179 @@
+\documentclass[12pt]{article}
+\pagestyle{plain}
+
+\usepackage[spanish]{babel}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+
+
+\title{		\textbf{Laboratorio de Análisis Clínicos} }
+\author{}
+
+
+\begin{document}
+
+
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\section{Enunciado}
+	Este prestigioso laboratorio ha encomendado a un grupo de analistas el análisis de los procedimientos que se desarrollan en el mismo, para su posterior modelado.
+
+	Cuando un médico indica un análisis, el paciente debe comunicarse primero con el laboratorio para ver si ese estudio requiere una preparación previa al análisis. También se le informa, si así lo requiriera, el turno que se le asigna (día y hora), además de su costo. Esta información se brinda personalmente o por teléfono.
+
+	El paciente se presenta en el laboratorio en la fecha asignada o en cualquier momento, dependiendo del análisis a realizar. Si fuese la primera vez que concurre, se le tomarán sus datos personales para que quede como cliente del laboratorio.
+
+	Una vez extraídas las muestras, son enviadas para su análisis con etiquetas identificatorias, a la vez que al paciente se le entrega un talón con la fecha para retirar el resultado del análisis, el que deberá presentar junto con la factura de pago del mismo.
+
+	Si la muestra extraída presentara algún problema, el laboratorio se comunicará telefónicamente con el paciente para que vuelva a presentarse para repetir la extracción.
+
+	Todos los meses, los dueños del laboratorio piden un listado de estadísticas, donde se indica qué pacientes han venido al laboratorio por su obra social o medicina prepaga y aquellos que lo han hecho en forma particular.
+
+\clearpage
+\section{Objetivo}
+	El sistema a realizar tiene como objetivo asistir al laboratorio en cada una de las etapas que son parte de un análisis clínico. 
+
+\section{Alcance}
+
+	\begin{itemize}
+		\item Guardara datos sobre los posibles estudios médicos a realizar. 
+			\begin{itemize}
+				\item Análisis Clínico: descripción general sobre en qué consiste el análisis que ofrece el laboratorio.
+				\item Preparación previa: Descripcion de los estudios que deben hacerse antes de someterse al análisis médico. 
+				\item Costo: El costo del procedimiento.
+			\end{itemize}
+
+		\item Guardara datos sobre la historia clínica de cada paciente.
+			\begin{itemize}
+				\item Paciente: nombre, apellido, edad, teléfono.
+				\item Historia Clinica: Listado de operaciones y análisis a los cuales se sometió el paciente.
+				\item Obra Social o medicina prepaga actual. 
+			\end{itemize}
+		
+		\item Guardara datos sobre los analisis clinicos que se estan realizando y aquellos que ya han culminado.
+			\begin{itemize}
+				\item Analisis Clinico.
+				\item Paciente.
+				\item Etapa.
+				\item Fecha de comienzo.
+				\item Paciente con Obra social, Medicina Prepaga o Particular.
+			\end{itemize}
+				
+		\item Guardara datos sobre las obras sociales y medicinas prepagas
+			\begin{itemize}
+				\item Datos Generales: Razon Social, Domicilio, telefono.
+				\item Listado de pacientes que se han hecho analisis en el laboratorio que pertenecen a la obra social o medicina prepaga.
+				\item Listado de Analisis Cubiertos
+			\end{itemize}
+			
+		\item 	Lo que debe abonar el usuario es determinado por el area de finanzas del laboratorio que utiliza como entrada los datos del sistema.
+		
+		\item 	Culminado cada mes, el sistema confeccionara un listado de pacientes que asistieron al laboratorio con obra social o medicina prepaga y aquellos que lo hicieron en forma particular.
+				Así mismo, se podrá solicitar al sistema listados en los cuales se discrimina por obra social y medicina prepaga.
+
+		\item 	El sistema NO asigna turnos; el sistema ofrece alternativas de turnos a partir del pedido de un analisis clinico en particular.
+				
+		\item 	El sistema cuenta con una lista de espera. Periodicamente, en función a los turnos cancelados, los operadores reciben los datos de las personas de esta lista para poder comunicarse con ellos para ofrecerles cambiar el turno acordado.		
+		
+	\end{itemize}
+			
+\section{Hipotesis}
+	\begin{itemize}
+		\item   La operación comienza cuando el cliente solicita un turno.
+		
+		\item   La operación concluye una vez que el laboratorio entrega al cliente los resultados del análisis. El cliente debe abonar el servicio antes de retirar los resultados.
+		
+		\item	El cliente puede solicitar ser ingresado en una lista de espera con el fín de ser atendido más rápido.
+		
+		\item	El cliente que llama por telefono para pedir turno es atendido por un operador que es el encargado de interactuar con el sistema.
+		
+		\item	No hace falta mantener al sistema actualizado con un sistema externo.
+		
+		\item	El laboratorio se encarga tanto de la extracción como del análisis de las muestras.
+		
+	\end{itemize}
+
+\clearpage
+
+\section{Diagrama de Actividades}
+	\subsection{Diagrama}
+	
+		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{Actividades.jpg}
+		\end{figure}
+	
+	\clearpage
+	\subsection{Descripción de las actividades}
+		\subsubsection*{Solicitar Turno}
+			\begin{enumerate}
+				\item El paciente proporciona su nombre y apellido
+				\item El paciente solicita un determinado tipo de análisis clínico.
+				\item El paciente indica si tiene medicina prepaga, obra social o si esta asistiendo como particular.
+			\end{enumerate}
+		
+		\subsubsection*{Acordar Turno}
+			\begin{enumerate}
+				\item Consultar en el sistema los turnos disponibles para ese determinado análisis y asignar un turno al paciente.
+				\item Informar al paciente el costo del procedimiento.
+				\item Ingresar en el sistema el turno acordado.
+				\item Indicar al paciente si hace falta una preparación previa al análisis y describirlo.
+			\end{enumerate}
+		
+		\subsubsection*{Realizar Preparación Previa}
+			\begin{enumerate}
+				\item Hacerse los estudios solicitados.
+				\item Ingerir la medicina necesaria.
+				\item Cumplir con cualquier otro requisito indicado.
+			\end{enumerate}		
+		
+		\subsubsection*{Realizar Extracción}
+			\begin{enumerate}
+				\item En caso de que sea la primera vez que el paciente concurre al laboratorio, se toman sus datos y se los ingresa al sistema.
+				\item Se efectua la extracción de sangre correspondiente y se identifica a la muestra con etiquetas.
+				\item Se entrega al paciente un talon con la fecha para retirar los resultados del análisis.
+				\item Actualizar estado de la operación en el sistema.
+			\end{enumerate}
+		
+		\subsubsection*{Analizar la Muestra}
+			\begin{enumerate}
+				\item Analizar los resultados de la muestra		
+				\item Guardar los resultados observados en el sistema y actualizar la historia clinica.
+				\item Corroborar que la muestra extraida no tenga problemas.		
+			\end{enumerate}
+			
+		\subsubsection*{Facturar Servicio}
+			\begin{enumerate}
+				\item Llenar factura con los datos correspondientes		
+				\item Guardar datos de la factura emitida.
+			\end{enumerate}
+
+		\subsubsection*{Retirar los Resultados}
+			\begin{enumerate}	
+				\item Abonar el servicio.		
+				\item Retirar los resultados correspondientes al análisis clinico.		
+			\end{enumerate}
+\clearpage
+\section{Casos de Uso}
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{CDU.jpg}
+	\end{figure}
+	
+
+\clearpage
+\section{Diagrama de Clases}	
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{DC.jpg}
+	\end{figure}
+
+\end{document}
