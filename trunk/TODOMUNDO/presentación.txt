@@ -1,0 +1,8 @@
+	OBJETIVO Y ALCANCE
+	==================
+
+La determinación del objetivo y su clara expresión son de vital importancia para la etapa de análisis, ya que éste regirá todo el resto del proceso.
+Debe ser conciso pero completo, describiendo brevemente pero en su totalidad el propósito del proceso de desarrollo.
+Es importante utilizar vocabulario preciso, de lo contrario puede caerse en malinterpretaciones que luego conducirán a un análisis erróneo.
+
+El alcance debe reflejar los objetivos, especificando de manera más concreta de qué datos y procedimientos el sistema se valdrá para cumplirlos. Es importante no omitir información sobre la parte del negocio abarcada, dejando en claro los límites. Por lo tanto, no debe dejarse de lado la parte del negocio no será cubierta por el sistema.
