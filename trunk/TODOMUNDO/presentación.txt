@@ -6,3 +6,28 @@ Debe ser conciso pero completo, describiendo brevemente pero en su totalidad el 
 Es importante utilizar vocabulario preciso, de lo contrario puede caerse en malinterpretaciones que luego conducirán a un análisis erróneo.
 
 El alcance debe reflejar los objetivos, especificando de manera más concreta de qué datos y procedimientos el sistema se valdrá para cumplirlos. Es importante no omitir información sobre la parte del negocio abarcada, dejando en claro los límites. Por lo tanto, no debe dejarse de lado la parte del negocio no será cubierta por el sistema.
+
+	HIPÓTESIS
+	=========
+
+En nuestro trabajo, las hipótesis ocupan la posición de las respuestas del cliente a las dudas surgidas sobre el negocio. Son por lo tanto relativas al dominio del problema, y no están relacionadas directamente con el proceso de desarrollo de software. Las hipótesis fueron elegidas arbitrariamente para permitir la definición concreta de los alcances del sistema y el análisis de su repercusión sobre éste; sin embargo, deben ser verosímiles, es decir conservar relación con un posible dominio real del problema, sin admitir posibilidades utópicas. Resultaría muy sencillo desligar al sistema de mayores responsabilidades, suponiendo mediante hipótesis un negocio muy sencillo. Sin embargo, esto llevaría al análisis de un sistema carente de real utilidad.
+
+No deben confundirse las hipótesis con el alcance. Para evitar este tipo de errores es importante hacer hincapié en que el las hipótesis tratan el detalle del modelo de negocio, y el alcance los límites del sistema.
+
+	PRINCIPALES HIPÓTESIS
+	=====================
+
+Uso de moneda única
+	Puesto que la empresa opera con clientes de distintas procedencias, debe decidir una política monetaria: si decide aceptar distintas monedas entrará en el mercado cambiario; si decide adoptar una única moneda para los cobros y los pagos de servicios, se desliga de esta tarea.
+
+Reglamentaciones y trámites aduaneros a cargo de terceros
+	Resultaría redundante que TODOMUNDO conociera los reglamentos de todos los países que pudiera atravesar una carga, dado que ellas deben ser conocidas por las empresas de transporte que efectúan los tramos. Queda claro entonces que son éstas últimas quienes se encargarán de informar a TODOMUNDO qué tipo de cargas pueden atravesar qué tramos de un recorrido.
+
+Existencia de lientes prioritarios ante sobreventas
+	Es cierto que la sobreventa se realiza en base a la suposición de que un porcentaje de las reservas son canceladas a último momento. Sin embargo, esto no puede asegurarse, por lo cual es necesario para la empresa definir un protocolo que le permita discriminar qué cargas transportar y cuáles demorar ante casos de sobreventa.
+
+Indemnizaciones por cuenta de empresas tercerizadas
+	Llegado el caso de que hubieran pérdidas de valor accidentales sobre las cargas transportadas, quien debe hacerse responsable del hecho es la empresa tercerizada que se haya contratado, puesto que TODOMUNDO también resulta damnificado en este caso.
+
+Itinerarios variables para igual origen y destino
+	Puede en distintas ocasiones resultar conveniente tomar distintos caminos para realizar un traslado, ya sea por costos, plazos o motivos de seguridad. Es entonces importante que el armado de itinerarios no sea fijo y permita transportar una carga de un punto a otro a través de distintos itinerarios.
