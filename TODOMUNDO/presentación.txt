@@ -2,10 +2,22 @@
 	==================
 
 La determinación del objetivo y su clara expresión son de vital importancia para la etapa de análisis, ya que éste regirá todo el resto del proceso.
-Debe ser conciso pero completo, describiendo brevemente pero en su totalidad el propósito del proceso de desarrollo.
-Es importante utilizar vocabulario preciso, de lo contrario puede caerse en malinterpretaciones que luego conducirán a un análisis erróneo.
 
-El alcance debe reflejar los objetivos, especificando de manera más concreta de qué datos y procedimientos el sistema se valdrá para cumplirlos. Es importante no omitir información sobre la parte del negocio abarcada, dejando en claro los límites. Por lo tanto, no debe dejarse de lado la parte del negocio no será cubierta por el sistema.
+Debe ser conciso pero completo, describiendo brevemente pero en su totalidad el propósito del desarrollo del sistema.
+
+Es importante utilizar un vocabulario preciso, o de lo contrario puede caerse en malinterpretaciones que luego conducirán a un análisis erróneo. No es tan complicada la concepción de un objetivo como lo es su correcta expresión; debe precisarse lo suficiente como para no permitir interpretaciones equivocadas al releerlo un tiempo después de su determinación.
+
+Luego el alcance debe reflejar este objetivo, especificando de manera más concreta de qué datos y procedimientos el sistema se valdrá para cumplirlo.
+
+En este sentido, el alcance es un vínculo entre el negocio y el sistema: indica rigurosamente qué partes del negocio serán abarcadas por el sistema a construir.
+
+Para ello es importante definir claramente los límites del sistema, sin omitir qué partes del negocio no están comprendidas.
+
+Resulta útil para esto definir en el alcance qué datos serán guardados por el sistema. De esta forma, aquellas operaciones para las que no se posee los datos necesarios, no se podrán realizar. Sin embargo, debe aclararse qué operaciones para las cuales se dispone de los datos no se realizarán.
+
+Un caso de esto es nuestro manejo de las cargas no reclamadas en el destino. Si bien el sistema posee los datos necesarios para generar una alarma, enviar un email, o imprimir una carta de intimación al receptor pasado un tiempo prudencial, ello no es realizado pues este tipo de casos quedan fuera del alcance del sistema propuesto.
+
+
 
 	HIPÓTESIS
 	=========
